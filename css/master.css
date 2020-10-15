@@ -1,0 +1,17 @@
+body {
+    animation: transitionIn 0.75s;
+}
+.img {
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+from {
+    opecity:0;
+    transform: translateY(-15px);
+}
+to {
+    opecity:1 ;
+    transform: translateY(0);
+}
+}

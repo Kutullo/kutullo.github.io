@@ -1,0 +1,160 @@
+
+
+.project{
+   display:block;
+   width:85%;  
+   margin: 25px auto 50px auto;
+   padding: 10px  0px 10px 0px;   
+   min-height: 340px; 
+   background-color: darkslategray; 
+   color:white ; 
+}
+
+
+
+.project-image {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.project-details{
+   display: block;
+   width: 100%;
+}
+
+.project-heading {
+   display: flex;
+   justify-content: center;
+   height: 50px;
+   align-items: center;
+   text-align: center;
+}
+
+
+.project img {
+   display: block;
+   margin: 0px auto 0px auto;
+   width: 95%;
+   height: auto;  
+}
+
+.project-title{
+   display: block;
+   margin-top: 10px;  
+   width: 100%;   
+}
+
+.project-title h1 ,
+.project-title h2 ,
+.project-title h3{
+   color: white;
+}
+
+.project-description{ 
+   display: block; 
+   margin:10px auto 15px auto ;
+   width: 90%;
+   min-height:75px; ;
+   text-align:center;
+   
+}
+.project-description p { 
+   font: normal normal normal 12pt "Calibri" ; 
+
+}
+.tags{
+   
+   display: block;
+   margin:0px auto 10px auto ;
+   font: italic normal normal 10pt "Calibri" ; 
+   color: darkgray;
+}
+
+.tags ul {
+   display: flex;
+   justify-content:center;
+   flex-direction:row;
+}
+
+.tags li {
+   display: block;
+   margin:10px ;
+   list-style: none;
+   
+}
+
+.project-links{
+   margin-top: 20px;
+   display: block;
+   text-align: center;
+   font: italic normal normal 13pt "Calibri" ; 
+}
+.project-links ul{ 
+   display: inline-block;
+}
+.project-links li{ 
+   display: inline-block;
+   margin: 0px 10px 15px 10px ;
+   min-width: 95px;
+   height: 35px;
+   list-style: none;
+   line-height: 35px;
+   border: 2px solid white;
+   border-radius: 8px;
+}
+
+.project-links  li a {
+   text-decoration: none;
+   color:white;
+}
+
+@media only screen and (min-width: 768px) {
+
+.container{
+      width:90% ;
+  }
+ 
+  .project{
+     display: grid;
+     grid-template-columns: 50% 50%;
+     grid-auto-flow: column;
+
+  }
+
+.project-details{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   width: 90%;
+   
+}
+ 
+.project-title{ 
+   justify-self: start;
+   height: 80px;
+       
+  }
+
+  .project-description{ 
+   display: block;
+   align-self: center;
+   font: italic normal normal 12pt "Calibri" ; 
+}
+
+  .project-image{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      
+  }
+  .project-links{
+      display: block;
+      width: 100%;
+      bottom: 0px;
+          
+  }
+  
+
+}

@@ -1,0 +1,526 @@
+
+*{   
+    margin: 0;
+    padding:0 ;    
+}
+body {
+    font:16px/1.5 "Calibri","Arial",sans-serif;
+    padding: 0;
+    margin: 0;  
+    color:black;
+    
+    
+}
+
+/* Global */
+.container{
+    width:85% ;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+
+/*Header */
+header {
+    
+    position: fixed;
+    width: 100%;  
+    min-height: 72px;  
+    
+    color:gold;   
+    z-index: 999;
+        
+}
+
+nev {
+    display:none;
+    top:0;
+    width: 45%;
+    padding: 0;
+    float:right;   
+}
+
+nev ul {
+    padding: 0;  
+}
+
+nev li{
+    display: inline;
+    top:0;
+    width : 60px;
+    height: 70px;
+    float:left;
+    margin: 0 2px 0 2px;       
+    text-align: center;  
+    border-radius: 10px;    
+}
+
+
+nev a{
+    display: block;
+    color:gold;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 70px;
+    
+}
+
+ #logo {  
+    width: 20%;
+    margin: 0;
+    float: left;
+    line-height: 70px;    
+}
+
+
+header a:hover{
+   
+    background-color: #373147;
+    color:#ffffff;
+    border-radius: 10px;  
+    
+}
+header .current{
+      
+    color:#ffffff;
+    border-radius: 10px;
+    border-bottom: #ffffff; 
+   
+}
+
+
+/* Responsive nevigation .................................*/
+
+#Resp-nev {
+    display: none;
+    margin:0px ;
+    padding :0;
+    position: absolute;
+    width:90%;
+    height: 80vh;
+    text-align:center;
+    background-color:#423a5c ;
+    right: 5%;
+   
+}
+
+#Resp-nev ul{
+    margin-top:65px;
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    
+}
+
+#Resp-nev li{
+    margin-bottom: 0.5em;  
+    height: 50px;
+    line-height: 50px;
+  
+}
+
+#Resp-nev a{
+    display:block;
+    text-decoration: none;
+    color:gold;
+    text-align:center
+ 
+}
+
+.nev-toggle{
+    position: absolute;
+    display: flex;
+    float: right;
+    height: 100%;
+    align-items: center;
+    right :10%;
+    z-index: 999;
+   
+}
+
+.nev-toggle span,
+.nev-toggle span::before,
+.nev-toggle span::after {
+    display:block;    
+    width: 2em ;
+    height:3px;
+    background-color: gold;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nev-toggle span::before,
+.nev-toggle span::after {
+    content:'';
+    position: absolute;
+}
+
+.nev-toggle span::before{
+    bottom:7px;
+}
+
+.nev-toggle span::after{
+    top:7px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+    nev {
+        display: block;
+    }
+
+    .nev-toggle{
+        display: none;
+    }
+
+    
+}
+
+
+#spacer {
+    height: 70px;
+}
+
+
+/*......................END of Header......................... */
+
+
+/*............Home page */
+
+#main-grid{
+    display: grid;
+    grid-template-rows: 25% 50% 20%;  
+    width: 100%;
+    height: 87vh;
+    
+      
+}
+
+section #home-content { 
+    display: flex;
+    flex-flow: column;
+    align-items: center;  
+    justify-content: center;
+    padding-left: 10px;  
+    color:#fafeff; 
+    font: normal normal lighter 12pt Calibri ; 
+    
+    
+  
+   
+}
+
+section #text  {
+    align-items: left;
+    line-height: 25pt;
+ 
+}
+
+section #home-content h1 {
+    color:#f0ffff;
+    font: italic normal bold 20pt "Baron Neue" ; 
+   
+}
+
+
+section #home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    
+    
+}
+
+section #home-image img {
+    margin: 0px;
+    padding: 0px;
+    height: 60%;
+    width: auto;
+    
+}
+
+#home-links
+{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;  
+    justify-content: center;
+    color: white;
+    font: italic normal normal 14pt "Calibri" ;    
+    
+}
+button{
+    margin: 5px;
+    height:40px;
+    width: 150px;
+    font: italic normal  12pt "Calibri" ; 
+    text-align: center;
+    background-color:#97a4b7; 
+    background: linear-gradient(white,#97a4b7);
+    color:black;
+    border-radius: 10px;
+    border-style: hidden;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+    .container{
+        width:90% ;
+    }
+    #main-grid{
+        display: grid;
+        grid-template-columns: 35% 60% 5%;    
+        width: 100%;
+        max-width: 1200px;
+        height: 87vh;                
+    }
+
+    section #home-content { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;  
+        height: 80vh;             
+    }
+
+
+    #home-image{   
+        height: 80vh;
+    }
+    
+    #home-links{
+        display: none;    
+    }
+    
+}
+
+footer {
+    
+    width: 100%;
+    min-height: 70px;
+    color: white;
+    background-color: #595172;
+    padding-top: 30px ;
+    
+}
+
+
+footer ul{
+    font-weight: bold;
+    float: right;
+}
+
+footer rights{
+    float: left;
+}
+
+footer li {
+     
+      display: inline; 
+      padding: 0 20px 0 20px ;
+}
+
+
+
+/*********** About page **********/
+
+.bg-active {
+    background-color:#e0e0e0;
+    }
+
+#about-content{  
+     
+    width: 100% ;
+    min-height: 500px;
+    padding-bottom: 60px;
+    font: regular normal normal 14pt "Calibri" ; 
+    background-color:#e0e0e0; 
+    
+}
+#about-grid{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+      
+}
+
+#about-grid h1 ,h2 ,h3{ 
+    color:#3b3451 ;
+}
+
+
+/* .........Decoration blocks............*/
+
+
+#about-me{    
+    display: block;
+    margin: 0px; 
+    padding-bottom: 10px;
+    min-height: 260px;  
+    border-radius: 25px ;  
+    max-width:500px ;  
+    color:#3b3451 ;
+}
+
+#about-me img {
+    margin:10px 0px 15px 0px;
+    height:150px ;
+    width: auto;
+    
+}
+.text {
+    margin-top: 15px;  
+    max-width:450px ;
+    color:#3b3451 ;
+    text-align: left;
+}
+
+/*********** Skills and Tech **********/
+
+ #skills{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    width:80%;   
+    min-height:240px;
+    color: #cecece;
+    text-align: center;
+  
+ }     
+
+
+#skills  ul
+{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:20px 0px 30px 0px;
+  width:200px; 
+  font-size: 10pt;
+  align-items: center;
+  
+}
+.skill-wrapper 
+{
+    margin-top: 20px;
+    background-color:#3b3451;
+}
+
+.skill-wrapper  ul h3 {
+    color: white;
+ }
+
+ #skills  ul img {
+     width: 30px;
+     height: auto;
+ }
+#skills  li
+{  
+    width: 100px;
+    margin:10px 0px 0px 10px;
+    padding-left: 5px;
+    list-style: none;
+    text-align: center;
+   
+}
+
+
+
+#skills img {
+    margin-right:10px ;
+    height: 30px;
+    width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+    #skills {
+        min-height: 450px;
+    }
+    .skill-wrapper {
+        display: flex;
+        flex-direction: row;
+        background-color:#3b3451;
+        min-height:300px ;
+
+    }
+   
+}
+
+
+/*********** endof skills nd Tech **********/
+
+#about-project {
+   
+    margin-top: 10px;  
+    width: 90%;
+    min-height:200px ; 
+}
+
+
+
+/*For Social*/
+
+#socials{ 
+    margin: 30px;
+    margin-top: 40px;
+    align-self: center;
+    height:60px ;
+   
+}
+
+#socials img {   
+    width: 30px;  
+}
+
+#socials ul 
+{
+    display: flex;
+    flex-flow: row;
+    justify-content:space-around; 
+    align-items: center;
+   
+
+    
+}
+
+#socials li 
+{
+    width: 60px ;
+    text-align: center;
+    margin:1px ;
+    list-style: none;
+    
+   
+}
+
+#socials a
+{
+    display: block;  
+    text-decoration: none; 
+   
+}
+
+/*
+#socials a:hover img{
+    width: 40px;  
+    
+} */
+
+
